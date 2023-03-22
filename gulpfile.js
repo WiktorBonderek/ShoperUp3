@@ -21,11 +21,13 @@ const css = function() {
         .pipe(gulp.dest(path.cssDist))
 };
 
+
 const imageMin = function() {
     return gulp.src(path.imageSrc)
         .pipe(imagemin())
         .pipe(gulp.dest(path.imageDist))
 };
+
 
 const html = function() {
     return gulp.src(path.htmlSrc)
