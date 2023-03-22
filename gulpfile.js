@@ -16,7 +16,7 @@ const path = {
 
 const css = function() {
     return gulp.src(path.cssSrc)
-        .pipe(sass().on("error", sass.logError))
+        .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
         .pipe(autoprefixer())
         .pipe(gulp.dest(path.cssDist))
 };
