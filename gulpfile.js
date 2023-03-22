@@ -3,6 +3,7 @@ const sass = require('gulp-sass')(require('sass'));
 const autoprefixer = require('gulp-autoprefixer');
 const imagemin = require('gulp-imagemin');
 const fileInclude = require('gulp-file-include');
+const minify = require('gulp-minify');
 const browserSync = require('browser-sync').create();
 
 const path = {
@@ -35,6 +36,10 @@ const html = function() {
             prefix: "@@",
             basepath: "@file"
         }))
+        .pipe(minify({
+            ext:{
+                src: path.htmlSrc
+            }}))
         .pipe(gulp.dest(path.root))
 }
 
