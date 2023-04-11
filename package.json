@@ -24,5 +24,9 @@
     "gulp-sass": "^5.1.0",
     "sass": "^1.58.3",
     "webpack-stream": "^7.0.0"
+  },
+  "dependencies": {
+    "del": "^7.0.0",
+    "gulp-rimraf": "^1.0.0"
   }
 }
