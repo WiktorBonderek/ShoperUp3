@@ -38,7 +38,7 @@ const html = function() {
         }))
         .pipe(minify({
             ext:{
-                src: path.htmlSrc
+                src: path.htmlSrc,
             }}))
         .pipe(gulp.dest(path.root))
 }
