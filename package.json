@@ -27,6 +27,7 @@
   },
   "dependencies": {
     "del": "^7.0.0",
+    "gulp-clean-dir": "^1.0.2",
     "gulp-rimraf": "^1.0.0"
   }
 }
