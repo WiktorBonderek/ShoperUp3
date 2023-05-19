@@ -42,8 +42,8 @@ welcomeModal.init();
  // document.cookie = "user=Marcin; max-age=3600;";
  // console.log(document.cookie);
 
-localStorage.setItem("user", "Marcin");
-sessionStorage.setItem("user", "Marcin2");
+localStorage.setItem("user", "Wiktor");
+sessionStorage.setItem("user", "Wiktor2");
 
 console.log(localStorage.getItem("user"));
 console.log(sessionStorage.getItem("user"));
