@@ -39,8 +39,8 @@ import { Modal } from "./components/modal";
 const welcomeModal = new Modal('modal-welcome', { onCloseShowInfo: true });
 welcomeModal.init();
 
-// document.cookie = "user=Marcin; max-age=3600;";
-// console.log(document.cookie);
+ // document.cookie = "user=Marcin; max-age=3600;";
+ // console.log(document.cookie);
 
 localStorage.setItem("user", "Marcin");
 sessionStorage.setItem("user", "Marcin2");
