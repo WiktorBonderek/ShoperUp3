@@ -7,7 +7,6 @@ const htmlmin = require('gulp-htmlmin');
 const browserSync = require('browser-sync').create();
 const webpack = require('webpack-stream');
 const webpackConfig = require('./webpack.config');
-const cleanDir = require('gulp-clean-dir');
 
 const path = {
     root: "./dist/",
@@ -83,13 +82,7 @@ const watch = function() {
     gulp.watch(path.htmlSrc, gulp.series(html, serverReload));
 }
 
-const clean = function() {
-    return gulp.src(path.jsSrc)
-        .pipe(cleanDir(path.jsDist))
-        .pipe(gulp.dest(path.jsDist))
-};
-
 // DODAĆ TASK O NAZWIE NP "CLEAR" KTORY BEDZIE CZYSCIC CALA ZAWARTOSC FOLDERU /DIST, I ODPALAC TO NA POCZATKU TASKU DEFAULT
 
-exports.default = gulp.series( clean, html, css, javascript, server, watch );
+exports.default = gulp.series( html, css, javascript, server, watch );
 // exports.production = gulp.series( imageMin, html, htmlMinify, cssProduction );
